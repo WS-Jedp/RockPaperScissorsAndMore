@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Suite of test for the Rules component :D Visual test for Rules components should be the same visual component 1`] = `
+<article
+  className="sc-AxjAm iEPgwd"
+>
+  <div
+    className="sc-AxiKw gpYzvK"
+  >
+    <h2 />
+    <div
+      className="close-rules-up"
+    >
+      <svg
+        height={20}
+        onClick={[Function]}
+        width={20}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
+          fill="#3B4262"
+          fillRule="evenodd"
+          opacity=".25"
+        />
+      </svg>
+    </div>
+  </div>
+  <figure
+    aria-label="Rules of the game"
+    className="sc-AxirZ qzCQ"
+  >
+    <img
+      alt="Rules of the game"
+    />
+  </figure>
+  <div
+    className="close-rules-down"
+  >
+    <svg
+      height="30"
+      onClick={[Function]}
+      width="30"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
+        fill="#3B4262"
+        fillRule="evenodd"
+        opacity=".25"
+      />
+    </svg>
+  </div>
+</article>
+`;
