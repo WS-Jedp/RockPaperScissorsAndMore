@@ -2,7 +2,7 @@
 
 exports[`Tests to the "Option" component Visual Tests to the "Option" component should be the same component 1`] = `
 <article
-  className="sc-AxjAm uJVMB"
+  className="sc-AxjAm NoaMR"
   color="red"
   onClick={[Function]}
 >

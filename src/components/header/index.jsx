@@ -9,4 +9,4 @@ export const Header = () => (
     <Logo />
     <Score />
   </WrapperHeader>
-) 
+)

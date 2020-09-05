@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test to "PlayAgain" component Visual tests to "PlayAgain" component should the component be the same 1`] = `
+<div
+  className="sc-AxjAm ewxWPR"
+>
+  <h2>
+    You Win
+  </h2>
+  <button
+    className="sc-AxiKw jortah"
+  >
+    Play Again
+  </button>
+</div>
+`;
