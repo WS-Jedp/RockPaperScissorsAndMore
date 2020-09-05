@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const WrapperHome = styled.section`
+export const LayoutWrapper = styled.section`
   display: flex;
   position: relative;
   flex-flow: column nowrap;
