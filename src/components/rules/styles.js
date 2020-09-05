@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const RulesWrapper = styled.article`
   display: flex;
+  background-color: var(--white-color);
   position: relative;
   flex-flow: column nowrap;
   align-items: center;

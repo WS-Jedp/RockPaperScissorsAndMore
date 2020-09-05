@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing visual features of the component "Score" The visual component should be the same 1`] = `
+<div
+  className="sc-AxjAm kusgnM"
+>
+  <h2>
+    score
+  </h2>
+  <b>
+    0
+  </b>
+</div>
+`;
