@@ -90,8 +90,8 @@ export const OptionWrapper = styled.article`
 
   @media screen and (min-width: 420px){
     & {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       border: 12px solid var(--${props => props.color || 'blue'}-color); 
     }
   }
