@@ -7,11 +7,12 @@ export const LogoWrapper = styled.figure`
   min-width: 90px;
   width: 30%;
   max-width: 200px;
-  max-height: 200px;
+  max-height: 150px;
 
   img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    object-fit: cover;
+    width: 60%;
+    height: 60%;
   }
 `
