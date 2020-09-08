@@ -4,18 +4,18 @@ import { ConflictWrapper } from './styles'
 import { PickedOption } from '../pickedOption'
 import { PlayAgain } from '../playAgain'
 
-export const Conflict = () => {
+export const Conflict = ({userOption = {}, homeOption = {}}) => {
 
   const isMobile = false
   
   return (
     <>
       <ConflictWrapper>
-        <PickedOption title='You Picked' option='scissors' color='yellow'picked={true} />
+        <PickedOption title='You Picked' option={userOption.name} color={userOption.color} picked={true} />
         {
         isMobile && <PlayAgain title='You Win'action={() => {}} />
         }
-        <PickedOption title='The House Picked' option='paper' color='cian' />
+        <PickedOption title='The House Picked' option={homeOption.name} color={homeOption.color} />
       </ConflictWrapper>
       {
         !isMobile && <PlayAgain title='You Win'action={() => {}} />
