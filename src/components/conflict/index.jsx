@@ -1,24 +1,61 @@
-import React from 'react'
+import React, {useState, useEffect, useContext} from 'react'
+import { useNavigate } from '@reach/router'
+import { Context } from '../../context'
+import { useMessage } from '../../hooks/useMessage'
+
 import { ConflictWrapper } from './styles'
 
 import { PickedOption } from '../pickedOption'
+import { PickingOptionLoading } from '../pickingOptionLoading' 
 import { PlayAgain } from '../playAgain'
 
-export const Conflict = ({userOption = {}, homeOption = {}}) => {
+export const Conflict = ({userOption = {}}) => {
 
-  const isMobile = false
+  const { optionHome, winner, validateWinner, resetOptionHome } = useContext(Context)
+  const [isMobile, setIsMobile] = useState(false)
+  const [isPicked, setIsPicked] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const navigate = useNavigate()
+
+  const [msgWinner, setMsgWinner] = useMessage(winner)
+
+  const handlePlayAgain = () => {
+    setIsPicked(false)
+    resetOptionHome(null)
+    navigate('/')
+  }
   
+  useEffect(() => {
+    if(optionHome !== null && isPicked === false) {
+      setTimeout(() => {
+        setIsPicked(true)
+      }, 20000)
+    }
+  }, [])
+  
+  // Validating Winner
+  useEffect(() => {
+    if(loading === true && isPicked === false) {
+      const result = validateWinner(userOption, optionHome)
+      setMsgWinner(result)
+      setLoading(false)    
+    }
+  }, [loading, isPicked])
+
+
   return (
     <>
       <ConflictWrapper>
         <PickedOption title='You Picked' option={userOption.name} color={userOption.color} picked={true} />
         {
-        isMobile && <PlayAgain title='You Win'action={() => {}} />
+          isPicked && isMobile && <PlayAgain title={msgWinner} action={handlePlayAgain} />
         }
-        <PickedOption title='The House Picked' option={homeOption.name} color={homeOption.color} />
+        {
+          !isPicked ? <PickingOptionLoading title='The House Is Picking...' /> : <PickedOption title='The House Is Picked' option={optionHome.name} color={optionHome.color} picked={true} />
+        }
       </ConflictWrapper>
       {
-        !isMobile && <PlayAgain title='You Win'action={() => {}} />
+        isPicked && !isMobile && <PlayAgain title={msgWinner} action={handlePlayAgain} />
       }
     </>
   )

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for the "pickingOptionLoading" component Visual tests for the component should the component be the same 1`] = `
+<article
+  className="sc-AxirZ ceaEUY"
+>
+  <div
+    className="sc-AxiKw hBByRz"
+  >
+    <div />
+  </div>
+  <strong>
+    The House Is Picking...
+  </strong>
+</article>
+`;

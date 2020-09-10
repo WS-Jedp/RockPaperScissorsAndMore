@@ -10,11 +10,12 @@ import { SelectOption } from '../../components/selectOption'
 
 export const Home = () => {
 
-  const { setNewOptionUser } = useContext(Context)
+  const { setNewOptionUser, setNewOptionHome } = useContext(Context)
   const navigate = useNavigate()
 
   const handleAction = (value) => {
     setNewOptionUser(value)
+    setNewOptionHome()
     navigate('/result')
   }
 

@@ -9,6 +9,7 @@ exports[`Test to "PlayAgain" component Visual tests to "PlayAgain" component sho
   </h2>
   <button
     className="sc-AxiKw jortah"
+    onClick={[Function]}
   >
     Play Again
   </button>
