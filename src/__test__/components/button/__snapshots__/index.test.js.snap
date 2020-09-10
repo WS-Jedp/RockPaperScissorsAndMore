@@ -3,6 +3,7 @@
 exports[`Tests to the Button compoennt Visual tests to the "Button" component The components should be the same 1`] = `
 <button
   className="sc-AxirZ eZZyOJ"
+  onClick={[Function]}
 >
   Play Again
 </button>
@@ -11,6 +12,7 @@ exports[`Tests to the Button compoennt Visual tests to the "Button" component Th
 exports[`Tests to the Button compoennt Visual tests to the "Button" component The components should be the same 2`] = `
 <button
   className="sc-AxjAm kAaWoH"
+  onClick={[Function]}
 >
   Rules
 </button>

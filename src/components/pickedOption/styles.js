@@ -17,12 +17,17 @@ export const PickedOptionWrapper = styled.article`
   }
 
   .waiting-picked {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 110px;
     height: 110px;
     border: 9px solid #273ca9;
     border-radius: 50%;
     background-color: #273ca9;
   }
+  
 
   @media screen and (min-width: 420px) {
     & {
