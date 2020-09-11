@@ -1,5 +1,6 @@
 import React, {createContext, useState} from 'react'
 import { selectOption } from '../tools/selectOption'
+import { defineScore } from '../tools/defineScore'
 import { selectOptionHome } from '../tools/selectOptionHome'
 import { selectWinner } from '../tools/selectWinner'
 
@@ -11,6 +12,7 @@ export const Provider = ({children}) => {
   const [optionHome, setOptionHome] = useState(null)
   const [winner, setWinner] = useState(null)
   const [score, setScore] = useState(0)
+  const [showScore, setShowScore] = useState(true)
 
   const selectedUserOption = (name) => {
     const newOption = selectOption(name)
@@ -23,13 +25,15 @@ export const Provider = ({children}) => {
   const selectedWinner = (optUser, optHome) => {
     const result = selectWinner(optUser, optHome)
     setWinner(result)
+    const newScore = defineScore(result, score)
+    setScore(newScore)
+    setShowScore(false)
     return result
   }
 
-  const winMatch = () => setScore(score + 1)
-  const loseMatch = () => {
-    if (score > 0) setScore(score - 1)
-    else setScore(0)
+  const setScoreWinner = () => {
+    const newScore = defineScore(winner, score)
+    setScore(newScore)
   }
 
   const initialState = {
@@ -39,6 +43,10 @@ export const Provider = ({children}) => {
     setNewOptionHome: selectedHomeOption, 
     resetOptionHome: setOptionHome, 
     validateWinner: selectedWinner,
+    newScore: setScoreWinner,
+    setShowScore,
+    showScore, 
+    score,
     winner
   }
   

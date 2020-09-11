@@ -4,9 +4,9 @@ import { WrapperHeader } from './styles'
 import { Score } from '../score/index'
 import { Logo } from '../logo'
 
-export const Header = () => (
+export const Header = ({score, showScore}) => (
   <WrapperHeader>
     <Logo />
-    <Score />
+    <Score score={score} showScore={showScore} />
   </WrapperHeader>
 )
