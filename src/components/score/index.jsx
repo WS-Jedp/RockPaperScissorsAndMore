@@ -1,13 +1,15 @@
 import React from 'react'
 import { ScoreWrapper } from './styles'
 
-export const Score = ({title = "score", score = 0}) => {
+import { LoadingScore } from '../loadingScore'
+
+export const Score = ({title = "score", score = 0, showScore}) => {
 
   return (
     <ScoreWrapper>
       <h2>{ title }</h2>
       <b>
-        { score }
+        { showScore ? score : <LoadingScore /> }
       </b>
     </ScoreWrapper>
   )

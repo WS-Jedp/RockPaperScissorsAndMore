@@ -11,7 +11,7 @@ import { PlayAgain } from '../playAgain'
 
 export const Conflict = ({userOption = {}}) => {
 
-  const { optionHome, winner, validateWinner, resetOptionHome } = useContext(Context)
+  const { optionHome, winner, validateWinner, resetOptionHome, setShowScore } = useContext(Context)
   const [isMobile, setIsMobile] = useState(false)
   const [isPicked, setIsPicked] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -29,7 +29,8 @@ export const Conflict = ({userOption = {}}) => {
     if(optionHome !== null && isPicked === false) {
       setTimeout(() => {
         setIsPicked(true)
-      }, 20000)
+        setShowScore(true)
+      }, 1500)
     }
   }, [])
   
