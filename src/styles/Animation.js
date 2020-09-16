@@ -28,3 +28,16 @@ const LoadingScore = keyframes`
 export const LoadingScoreAnimation = (loop = 'infinite', time = '.3s', type = 'ease-in-out') => css`
   animation: ${LoadingScore} ${loop} ${time} ${type};
 `
+
+const FadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
+
+export const FadeInAnimation = (time = '.6s', type = 'ease-in-out') => css`
+  animation: ${FadeIn} ${time} ${type};
+`
