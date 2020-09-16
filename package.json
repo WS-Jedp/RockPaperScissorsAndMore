@@ -6,7 +6,10 @@
   "scripts": {
     "build": "webpack --mode 'production'",
     "dev": "webpack-dev-server --history-api-fallback --mode 'development' --open",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    
   },
   "repository": {
     "type": "git",
@@ -28,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/WS-Jedp/RockPaperScissorsAndMore/issues"
   },
-  "homepage": "https://github.com/WS-Jedp/RockPaperScissorsAndMore#readme",
+  "homepage": "https://github.com/WS-Jedp/RockPaperScissorsAndMore",
   "devDependencies": {
     "@babel/core": "^7.11.5",
     "@babel/plugin-transform-runtime": "^7.11.5",
@@ -38,6 +41,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.4",
     "file-loader": "^6.1.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.4.1",
     "jest": "^26.4.2",
     "react-test-renderer": "^16.13.1",
