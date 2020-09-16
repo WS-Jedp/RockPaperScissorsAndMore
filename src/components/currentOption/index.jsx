@@ -13,7 +13,7 @@ export const CurrentOption = ({option = 'rock'}) => {
         return <IconPaper />
         break;
       case "scissors":
-        return <IconScissors />
+    return <IconScissors />
         break;
       case "lizard":
         return <IconLizard />
