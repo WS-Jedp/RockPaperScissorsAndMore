@@ -14,6 +14,11 @@ exports[`Suite of test for the Rules component :D Visual test for Rules componen
       <svg
         height={20}
         onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
         width={20}
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -40,6 +45,11 @@ exports[`Suite of test for the Rules component :D Visual test for Rules componen
     <svg
       height="30"
       onClick={[Function]}
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
       width="30"
       xmlns="http://www.w3.org/2000/svg"
     >

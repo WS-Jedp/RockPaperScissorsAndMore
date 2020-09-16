@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test to "PickedOption" component Visual tests to "PickedOption" component should the component be the same 1`] = `
+<article
+  className="sc-AxjAm lnJNbM"
+>
+  <div
+    className="waiting-picked"
+  />
+  <strong>
+    The house picked
+  </strong>
+</article>
+`;

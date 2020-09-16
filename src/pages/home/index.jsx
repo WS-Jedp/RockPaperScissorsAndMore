@@ -1,14 +1,28 @@
-import React from 'react'
-import ImageRules from '../../assets/images/image-rules-bonus.svg'
+import React, { useContext, useEffect } from 'react'
+import { useNavigate } from '@reach/router'
 
-import { WrapperHome } from './styles'
+import { Context } from '../../context'
+import { options } from '../../tools/options'
 
-import { Rules } from '../../components/rules'
-import { Header } from '../../components/header'
+import { Layout } from '../../layouts'
+import { SelectOption } from '../../components/selectOption'
 
-export const Home = () => (
-  <WrapperHome>
-    <Header />
-    <Rules title="Rules" img={ImageRules} />
-  </WrapperHome>
-)
+
+export const Home = () => {
+
+  const { setNewOptionUser, setNewOptionHome } = useContext(Context)
+  const navigate = useNavigate()
+
+  const handleAction = (value) => {
+    setNewOptionUser(value)
+    setNewOptionHome()
+    navigate('/result')
+  }
+
+  return (
+    <Layout>
+      <SelectOption action={handleAction} />
+    </Layout>
+  )
+
+}
